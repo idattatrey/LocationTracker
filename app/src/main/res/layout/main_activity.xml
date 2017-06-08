@@ -1,0 +1,75 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.google.android.gms.location.sample.locationupdates.com.location.tracker.HomeActivity" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <Button
+            android:id="@+id/start_updates_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="#2196F3"
+            android:gravity="center"
+            android:onClick="startUpdatesButtonHandler"
+            android:text="START SHIFT"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/stop_updates_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="#2196F3"
+            android:enabled="false"
+            android:gravity="center"
+            android:onClick="stopUpdatesButtonHandler"
+            android:text="STOP SHIFT"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#2196F3"
+            android:gravity="center"
+            android:onClick="exitApp"
+            android:text="EXIT"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tracking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#4CAF50"
+        android:gravity="center"
+        android:onClick="startUpdatesButtonHandler"
+        android:padding="10dp"
+        android:text="TRACKING"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+</FrameLayout>
+
+
